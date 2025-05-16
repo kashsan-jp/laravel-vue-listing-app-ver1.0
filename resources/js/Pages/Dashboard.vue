@@ -28,8 +28,8 @@ const deleteListing = (id) => {
             <div class="mb-6">
 
                 <!--- Heading --->
-                <div class="flex items-center justify-between mb^4">
-                    <Title>Your latest Listings</Title>
+                <div class="flex items-center justify-between mb-4">
+                    <Title class="lg:text-2xl md:text-xl sm:text-xs">Your latest Listings</Title>
 
                     <div class="flex items-center gap-4 text-xs">
                         <p>
@@ -42,7 +42,7 @@ const deleteListing = (id) => {
                 </div>
 
                 <!--- Table --->
-                <table class="w-full table-fixed border-collapse
+                <table class="lg:w-full ms:w-1/3 table-fixed border-collapse
                 overflow-hidden rounded-md text-sm ring-1 ring-slate-300
                 dark:ring-slate-600 bg-white shadow-lg"
                 >
