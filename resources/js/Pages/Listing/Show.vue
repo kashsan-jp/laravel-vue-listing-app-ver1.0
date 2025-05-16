@@ -33,7 +33,7 @@ const toggleApprove = () => {
     <!--- Admin ---->
     <div v-if="$page.props.auth.user.role === 'admin'"
     class="bg-slate-800 text-white mb-6 p-6 rounded-md font-medium
-    flex items-center justify-between">
+    flex items-center justify-between lg:w-full md:w-3/4 ms:w-1/4">
         <p>
             This listing is {{ listing.approved ? "Approved" : "Disapproved" }}.
         </p>
@@ -45,8 +45,8 @@ const toggleApprove = () => {
     </div>
 
 
-    <Container class="flex gap-4">
-        <div class="w-1/4 rounded-md overflow-hidden">
+    <Container class=" 2xl:flex xl:flex md:flex gap-4">
+        <div class="2xl:w-1/4 sm:w-1/6 rounded-md overflow-hidden ">
             <img 
                 :src="listing.image 
                     ? `/storage/${listing.image}`
@@ -62,10 +62,9 @@ const toggleApprove = () => {
 
             <!--- Listing Info -->
              <div class="mb-6">
-                <div class="flex items-end justify-between mb-2">
+                <div class="2xl:flex xl:flex md:flex md:items-end justify-between mb-2">
                     <p class="text-slate-400 w-full border-b">
                         Listing Detail
-
                     </p>
                     <!--- Edit and Delete Button -->
                     <div 
@@ -92,10 +91,10 @@ const toggleApprove = () => {
                         </button>
                     </div>
                 </div>
-                <h-3 class="font-bold text-2xl mb-4">
+                <h-3 class="font-bold 2xl:text-2xl mb-4 sm:text-sm">
                         {{  listing.title  }}
                     </h-3>
-                    <p>{{  listing.desc }}</p>
+                    <p class="2xl:text-2xl mb-4 sm:text-sm">{{  listing.desc }}</p>
             </div>
 
             <!--- Contact Info -->

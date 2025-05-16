@@ -33,7 +33,7 @@ const search = () => {
 <template>
     <Head title="- Latest Listing"/>
 
-    <div class="flex items-center justify-between mb-4">
+    <div class="flex items-center justify-between mb-4 ">
 
         <div class="flex items-center gap-2">
             <Link 
@@ -76,6 +76,7 @@ const search = () => {
                     icon="magnifying-glass"
                     placeholder="Search..."
                     v-model="form.search"
+                    class="lg:w-60 md:w-50 sm:w-30"
                 />
             </form>
         </div>
@@ -84,7 +85,7 @@ const search = () => {
 
     <div v-if="Object.keys(listings.data).length">
 
-        <div class="grid lg:grid-cols-4 ms:grid-2 gap-4">
+        <div class="grid lg:grid-cols-4 md:grid-cols-2 ms:grid-cols-1 gap-4">
             <div v-for="listing in listings.data" :key="listing.id">
                <Card :listing="listing"/>
             </div>

@@ -30,7 +30,7 @@ const selectTag = (tag) => {
         class="bg-white rounded-lg shadow-lg overflow-hidden
         dark:bg-slate-800 h-full flex flex-col justify-between"
     >
-        <div>
+        <div class="">
             <!-- Image -->
              <Link :href="route('listing.show',listing.id)">
                 <img 
@@ -63,7 +63,7 @@ const selectTag = (tag) => {
 
                 <button 
                     @click="selectTag(tag)"
-                    class=" bg-slate-500 text-white px-2 py-px
+                    class="bg-slate-500 text-white px-2 py-px
                     rounded-full hover:bg-slate-700 dark:hover:bg-slate-900"
                 >
                 {{ tag }}
