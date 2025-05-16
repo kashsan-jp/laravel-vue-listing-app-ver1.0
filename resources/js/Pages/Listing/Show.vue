@@ -46,7 +46,7 @@ const toggleApprove = () => {
 
 
     <Container class="flex gap-4">
-        <div class="w-1/4 rou  nded-md overflow-hidden">
+        <div class="w-1/4 rounded-md overflow-hidden">
             <img 
                 :src="listing.image 
                     ? `/storage/${listing.image}`
