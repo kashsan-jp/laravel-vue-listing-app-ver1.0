@@ -70,7 +70,7 @@ const toggleApprove = () => {
                     <div 
                         v-if="canModify"
                         class="pl-4 flex items-center gap-4">
-                       
+                       <!-- {{ canModify }} -->
                         <Link
                             :href="route('listing.edit', listing.id)"
                             class="bg-green-500 rounded-md
