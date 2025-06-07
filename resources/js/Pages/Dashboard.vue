@@ -29,7 +29,7 @@ const deleteListing = (id) => {
 
                 <!--- Heading --->
                 <div class="flex items-center justify-between mb-4">
-                    <Title class="lg:text-2xl md:text-xl sm:text-xs">Your latest Listings</Title>
+                    <Title class="lg:text-2xl md:text-xl sm:text-xs">Your latest Listings<br>(最近の投稿)</Title>
 
                     <div class="flex items-center gap-4 text-xs">
                         <p>
