@@ -84,7 +84,7 @@ class ListingController extends Controller implements HasMiddleware
 
         if($request->hasFile('image')) {
             $fields['image'] = Storage::disk('private')
-            ->put('images/listing', $request->image);
+            ->put('/', $request->image);
         }
 
         $fields['tags'] = implode(',', array_unique(array_filter(array_map
@@ -146,7 +146,7 @@ class ListingController extends Controller implements HasMiddleware
                 Storage::disk('private')->delete($listing->image);
             }
             $fields['image'] = Storage::disk('private')
-            ->put('images/listing', $request->image);
+            ->put('/', $request->image);
         } else {
             $fields['image'] = $listing->image;
         }
