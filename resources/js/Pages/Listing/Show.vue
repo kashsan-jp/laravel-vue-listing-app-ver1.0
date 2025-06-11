@@ -49,7 +49,7 @@ const toggleApprove = () => {
         <div class="2xl:w-1/4 sm:w-1/6 rounded-md overflow-hidden ">
             <img 
                 :src="listing.image 
-                    ? `/storage/${listing.image}`
+                    ? `/private/${listing.image}`
                     : '/storage/images/default.jpg'"
                 
                 class="w-full h-full object-cover object-center"
