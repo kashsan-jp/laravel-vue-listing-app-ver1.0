@@ -17,10 +17,10 @@ const makeLabel = (label) => {
 </script>
 
 <template>
-    <div class="flex justify-between items-center">
+    <div class="flex justify-between items-center grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 sm:pl-2 gap-4">
         <div 
             class="flex items-center rounded-md 
-            overflow-hidden shadow-lg">
+            overflow-hidden shadow-lg gap-1">
             <div v-for="(link, i) in paginator.links" :key="i">
 
                 <component

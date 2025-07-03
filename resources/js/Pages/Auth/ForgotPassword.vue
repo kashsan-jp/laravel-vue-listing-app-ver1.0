@@ -21,7 +21,7 @@ const submit = () => {
 
 <template>
     <Head title="- Forgot Password"/>
-    <Container class="w-1/2">
+    <Container class="ld:w-1/2 sm:w-3/4 sm:pl-2">
         <div class="mb-8 text-center">
             
             <p>

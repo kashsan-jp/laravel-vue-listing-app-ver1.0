@@ -31,7 +31,7 @@ const form = useForm({
         <ErrorMessages :errors="form.errors"/>
 
         <form 
-            class="grid grid-cols-2 gap-6"
+            class="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 sm:pl-2 gap-4"
             @submit.prevent="form.post(route('listing.store'))"
         >
             <div class="space-y-6">

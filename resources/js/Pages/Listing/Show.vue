@@ -45,11 +45,11 @@ const toggleApprove = () => {
     </div>
 
 
-    <Container class=" 2xl:flex xl:flex md:flex gap-4">
-        <div class="2xl:w-1/4 sm:w-1/6 rounded-md overflow-hidden ">
+    <Container class=" 2xl:flex xl:flex md:flex sm:flex-column gap-4">
+        <div class="2xl:w-1/4 md:w-full sm:w-3/4 rounded-md overflow-hidden">
             <img 
                 :src="listing.image 
-                    ? `/private/${listing.image}`
+                    ? `/storage/${listing.image}`
                     : '/storage/images/default.jpg'"
                 
                 class="w-full h-full object-cover object-center"
@@ -58,12 +58,12 @@ const toggleApprove = () => {
             />
         </div>
 
-        <div class="w-3/4">
+       <div class="2xl:w-3/4 sm:w-full"> 
 
             <!--- Listing Info -->
              <div class="mb-6">
-                <div class="2xl:flex xl:flex md:flex md:items-end justify-between mb-2">
-                    <p class="text-slate-400 w-full border-b">
+                <div class="2xl:flex xl:flex md:flex sm:flex-column  justify-between mb-2">
+                    <p class="text-slate-400 w-full border-b mb-3">
                         Listing Detail
                     </p>
                     <!--- Edit and Delete Button -->
@@ -91,10 +91,18 @@ const toggleApprove = () => {
                         </button>
                     </div>
                 </div>
-                <h-3 class="font-bold 2xl:text-2xl mb-4 sm:text-sm">
+                <div class="my-4">
+                    <div class="mb-2 font-bold lg:text-2xl md:text-xl sm:text-xl">
+                        <h-3 class="text-green-400">
                         {{  listing.title  }}
-                    </h-3>
-                    <p class="2xl:text-2xl mb-4 sm:text-sm">{{  listing.desc }}</p>
+                        </h-3>
+                    </div>
+                    <div class="lg:text-xl md:text-lg sm:text-lg">
+                        <p>
+                        {{  listing.desc }}
+                        </p>
+                    </div>
+                </div>  
             </div>
 
             <!--- Contact Info -->
@@ -150,5 +158,5 @@ const toggleApprove = () => {
         </div>
     </div>
     </Container>
-    {{ listing.title }}
+    <!-- {{ listing.title }} -->
 </template>

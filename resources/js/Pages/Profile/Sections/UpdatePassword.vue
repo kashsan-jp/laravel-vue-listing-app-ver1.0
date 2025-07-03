@@ -42,21 +42,21 @@ console.log(form);
                 <InputField
                     label="Current Password"
                     icon="key"
-                    class="w-1/2"
+                    class="lg:w-1/2 sm:3/4"
                     type="password"
                     v-model="form.current_password"
                 />
                 <InputField
                     label="New Password"
                     icon="key"
-                    class="w-1/2"
+                    class="lg:w-1/2 sm:3/4"
                     type="password"
                     v-model="form.password"
                 />
                 <InputField
                     label="Confirm New Password"
                     icon="key"
-                    class="w-1/2"
+                    class="lg:w-1/2 sm:3/4"
                     type="password"
                     v-model="form.password_confirmation"
                 />

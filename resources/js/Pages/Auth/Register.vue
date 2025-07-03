@@ -24,7 +24,7 @@ const submit = () => {
 
 <template>
     <Head title="- Register"/>
-    <Container class="w-1/2">
+    <Container class="ld:w-1/2 sm:w-3/4 sm:pl-2">
         <div class="mb-8 text-center">
             <Title class="text-3xl font-bold mb-2">Register a new account</Title>
             <p>

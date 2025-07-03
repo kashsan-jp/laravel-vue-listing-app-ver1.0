@@ -8,6 +8,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Middleware\Admin;
 use Illuminate\Support\Facades\Route;
 
+
 Route::middleware(['auth'])->group(function(){
 
     Route::get('/dashboard', [DashboardController::class,'index'])
@@ -24,6 +25,8 @@ Route::middleware(['auth'])->group(function(){
 
     Route::delete('profile',[ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+Route::inertia('/details', 'Details')->name('details');
 
 //Listings Routes
 Route::get('/', [ListingController::class, 'index'])->name('home');

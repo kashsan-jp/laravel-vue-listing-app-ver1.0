@@ -83,7 +83,7 @@ class ListingController extends Controller implements HasMiddleware
         ]);
 
         if($request->hasFile('image')) {
-            $fields['image'] = Storage::disk('private')
+            $fields['image'] = Storage::disk('public')
             ->put('/', $request->image);
         }
 
@@ -110,6 +110,7 @@ class ListingController extends Controller implements HasMiddleware
             : false
         ]);
     }
+
 
     /**
      * Show the form for editing the specified resource.
@@ -143,9 +144,9 @@ class ListingController extends Controller implements HasMiddleware
         if($request->hasFile('image')) {
 
             if($listing->image) {
-                Storage::disk('private')->delete($listing->image);
+                Storage::disk('public')->delete($listing->image);
             }
-            $fields['image'] = Storage::disk('private')
+            $fields['image'] = Storage::disk('public')
             ->put('/', $request->image);
         } else {
             $fields['image'] = $listing->image;
@@ -169,7 +170,7 @@ class ListingController extends Controller implements HasMiddleware
         Gate::authorize('modify', $listing);
 
         if($listing->image) {
-            Storage::disk('private')->delete($listing->image);
+            Storage::disk('public')->delete($listing->image);
         }
 
         $listing->delete();

@@ -53,7 +53,7 @@ const deleteListing = (id) => {
                     >
                     <tr>
                         <th class="w-3/4 p-3 text-left">Listing Title</th>
-                        <th class="w-1/4 py-3 pr-3 text-right">View</th>
+                        <th class="w-1/5 py-3 pr-3 text-right">View</th>
                         <th class="w-1/5 py-3 pr-3 text-right">Edit</th>
                         <th class="w-1/5 py-3 pr-3 text-right">Delete</th>
                     </tr>

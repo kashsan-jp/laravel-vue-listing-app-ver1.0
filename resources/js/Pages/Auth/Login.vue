@@ -29,7 +29,8 @@ const submit = () => {
 
 <template>
     <Head title="- Login"/>
-    <Container class="w-1/2">
+    <Container class="lg:w-1/2 md:w-1/2 sm:w-3/4 sm:pl-2">
+    <!-- <Container class="w-1/2"> -->
         <div class="mb-8 text-center">
             <Title class="text-3xl font-bold mb-2">Login to your account</Title>
             <p>

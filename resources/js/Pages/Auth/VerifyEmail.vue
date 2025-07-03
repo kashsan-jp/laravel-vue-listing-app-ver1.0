@@ -18,14 +18,19 @@ const submit = () => {
 
 <template>
     <Head title="- Email Verification"/>
-    <Container class="w-1/2">
+    <Container class="lg:w-1/2 sm:w-3/4">
         <div class="mb-8">
-            <p>
+            <p class="mb-10">
                 Thanks fo signing up!
                 Before getting started,
                 could you verify your email address by
                 by clicking on the link we just emailed to you?
-                If you didn't receive the email, we will gladly send you another.
+                If you didn't receive the email, we will gladly send you another
+            </p>
+            <p>
+                ご登録ありがとうございました。
+                サービスをご利用されるまえにご利用者様のメール確認をおこないますので、
+                下のボタンをクリックし、ご自身着の着信メールで確認ボタンをクリックしてください。
             </p>
         </div>
         
