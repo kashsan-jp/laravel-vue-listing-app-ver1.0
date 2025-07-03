@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
+use Illuminate\Database\Eloquent\Relations\HasMany;
+
 class User extends Authenticatable implements MustVerifyEmail
 {
     use HasFactory, Notifiable;
@@ -46,7 +48,7 @@ class User extends Authenticatable implements MustVerifyEmail
         ];
     }
 
-    public function listings() {
+    public function listings(): HasMany {
         return $this->hasMany(Listing::class);
     }
 
