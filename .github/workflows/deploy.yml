@@ -19,9 +19,7 @@ jobs:
         php-version: 8.2
 
     - name: Install Composer Dependencies
-      run: composer install --optimize-autoloader --no-dev --no-progress --no-interaction --prefer-dist
-    # - name: Composer Update
-    #   run: composer update
+      run: composer install --optimize-autoloader --no-dev --no-progress --no-interaction --prefer-dist && composer update
     - name: Install Node.js
       uses: actions/setup-node@v3
       with:
@@ -37,7 +35,7 @@ jobs:
         SOURCE: "." 
         REMOTE_HOST: ${{ secrets.VPS_HOST }}
         REMOTE_USER: ${{ secrets.VPS_USER }}
-        TARGET: "/var/www/html/k-ashtestsite.ddns.net"
+        TARGET: "/var/www/html/laravel-vue-listing-app"
 
     - name: Run Remote/Artisan Commands
       uses: appleboy/ssh-action@v0.1.6
@@ -46,6 +44,6 @@ jobs:
         usernme: ${{ secrets.VPS_USER }}
         key: ${{ secrets.SSH_PRIVATE_KEY}}
         script: 
-          cd /var/www/html/k-ashtestsite.ddns.net
+          cd /var/www/html/laravel-vue-listing-app
           php artisan migrate --force
           php artisan optimize
