@@ -39,7 +39,7 @@ jobs:
         TARGET: "/var/www/html/k-ashtestsite.ddns.net"
 
     - name: Run Remote/Artisan Commands
-      uses: appleboy/ssh-action@0.1.6
+      uses: appleboy/ssh-action@v0.1.6
       with:
         host: ${{ secrets.VPS_HOST}}
         usernme: ${{ secrets.VPS_USER }}
