@@ -40,8 +40,9 @@ jobs:
     - name: Run Remote/Artisan Commands
       uses: appleboy/ssh-action@v0.1.6
       with:
+        ssh: ${{ secrets.VPS_SSH_PORT }}
         host: ${{ secrets.VPS_HOST}}
-        usernme: ${{ secrets.VPS_USER }}
+        username: ${{ secrets.VPS_USER }}
         key: ${{ secrets.SSH_PRIVATE_KEY}}
         script: 
           cd /var/www/html/laravel-vue-listing-app
