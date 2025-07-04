@@ -28,7 +28,7 @@ jobs:
         node-version: '20'
 
     - name: Install NPM Dependencies
-      run: npm run build
+      run: npm install && npm run build
 
     - name: Synchronize Files To Server
       uses: easingthemes/ssh-deploy@v2.1.5
