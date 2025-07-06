@@ -68,9 +68,9 @@ jobs:
         username: ${{ secrets.VPS_USER }}
         key: ${{ secrets.SSH_PRIVATE_KEY}}
         run: |
-          ssh -p $VPS_SSH_PORT $VPS_USER@$VPS_HOST "cd /var/www/html/laravel-vue-listing-app && git pull origin main"
+          ssh -p $VPS_SSH_PORT $VPS_USER@$VPS_HOST "cd /var/www/html/ && git pull origin main"
         script: 
-          cd /var/www/html/laravel-vue-listing-app
+          cd /var/www/html/
           php artisan migrate --force
           php artisan optimize
 
