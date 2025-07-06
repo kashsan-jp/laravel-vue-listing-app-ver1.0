@@ -42,7 +42,7 @@ jobs:
       with:
         port: ${{ secrets.VPS_SSH_PORT }}
         host: ${{ secrets.VPS_HOST}}
-        username: ${{ secrets.VPS_USER }}
+        username: ${{ secrets.ramen }}
         key: ${{ secrets.SSH_PRIVATE_KEY}}
         run: |
           ssh -p $VPS_SSH_PORT $VPS_USER@$VPS_HOST "cd /var/www/html/laravel-vue-listing-app && git pull origin main"
