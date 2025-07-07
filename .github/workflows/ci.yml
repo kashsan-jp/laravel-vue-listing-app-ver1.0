@@ -1,0 +1,13 @@
+name: CI 
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  job_1:
+    runs-on: ubuntu-latest
+    steps:
+      - run: ls -la
+      - run: pwd

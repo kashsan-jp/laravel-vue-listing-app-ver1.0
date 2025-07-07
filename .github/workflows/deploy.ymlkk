@@ -33,8 +33,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: hi
-      run: echo {{$secrets.VPS_HOST}}
     - name: Checkout Code
       uses: actions/checkout@v3
     
