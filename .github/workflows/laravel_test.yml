@@ -37,3 +37,5 @@ jobs:
       run: php artisan test
     - name: migration
       run: php artisan migrate
+    - name: test
+      run: composer require laravel/browser-kit-testing --dev
