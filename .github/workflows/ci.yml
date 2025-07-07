@@ -20,6 +20,6 @@ jobs:
           coverage: none
 
       - name: Setup MySQL
-        run: mysql -uroot --defaults-extra-file=dbclient.cnf -e 'CREATE DATABASE test;'
+        run: mysql -uroot --defaults-extra-file=bclient.cnf -e 'CREATE DATABASE test;'
 
       - run: ls -la
