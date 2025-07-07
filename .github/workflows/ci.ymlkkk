@@ -30,8 +30,8 @@ jobs:
           php-version: 7.4
           extension: intl
           coverage: none
-      - name: test
-        run: cat /var/log/mysql/error.log
+      # - name: test
+      #   run: cat /var/log/mysql/error.log
       - name: Setup MySQL
         run: mysql -uroot --user=root --password=root -e 'CREATE DATABASE test;'
 
