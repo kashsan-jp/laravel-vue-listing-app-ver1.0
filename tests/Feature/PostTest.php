@@ -13,7 +13,7 @@ class PostTest extends TestCase
      */
     public function test_example(): void
     {
-        $response = $this->get('/Login');
+        $response = $this->get('/');
 
         $response->assertStatus(200);
     }
