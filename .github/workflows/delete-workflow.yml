@@ -1,12 +1,9 @@
 name: Delete workflow!
 
 on:
-  workflow_dispatch:
-    inputs:
-      workflow:
-        description: workflow-id, workflow-name or filename
-        required: true
-        type: string
+  push:
+    branches:
+      - main
 
 jobs:
   delete:
