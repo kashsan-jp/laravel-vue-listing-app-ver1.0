@@ -20,6 +20,6 @@ jobs:
           coverage: none
 
       - name: Setup MySQL
-        run: mysql -u root -p 8131kash -proot -e 'CREATE DATABASE test;'
+        run: mysql -u root -e 'CREATE DATABASE test;'
 
       - run: ls -la
